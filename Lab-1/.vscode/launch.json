@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Lab1_2",
+      "request": "launch",
+      "mainClass": "Lab1_2",
+      "projectName": "Lab-1_74d1ffd3"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/dhruvios/Documents/GitHub/Computer-Science-2/Lab-1",
+      "program": "/Users/dhruvios/Documents/GitHub/Computer-Science-2/Lab-1/build/Debug/outDebug"
+    }
+  ]
+}
