@@ -139,13 +139,13 @@ public class Lab2_2 {
         File file = new File(filename);
         try {
             Scanner fileScanner = new Scanner(file);
-            int[] array = new int[16]; // fixed size array
+            int[] array = new int[MAX_SIZE];
             int size = 0;
-            while (fileScanner.hasNext() && size < 16) {
-                try {
+            while (fileScanner.hasNext() && size < MAX_SIZE) {
+                if (fileScanner.hasNextInt()) {
                     array[size++] = fileScanner.nextInt();
-                } catch (InputMismatchException e) {
-                    fileScanner.next(); // ignore non-integer values
+                } else {
+                    fileScanner.next(); 
                 }
             }
             if (size == 0) {
@@ -154,7 +154,12 @@ public class Lab2_2 {
             }
             System.out.println("The list size is: " + size);
             System.out.print("The list is: ");
-            print(array);
+
+            for (int i = 0; i < size; i++) {
+                System.out.printf("%d ", array[i]);
+            }
+            System.out.println();
+
             while (true) {
                 int option = menu(scanner);
                 switch (option) {
